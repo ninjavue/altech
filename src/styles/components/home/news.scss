@@ -1,0 +1,44 @@
+.news{
+    &-box{
+        height: 320px;
+        max-height: 320px;
+        background: #f5f5f5;
+       background-image: url(@/assets/img/computer.jpg);
+       background-repeat: no-repeat;
+       background-position: center center;
+       object-fit: cover;
+       border-radius: 8px;
+       &.new--img{
+            background-image: url(@/assets/img/coputer3.jpg);
+        }
+    }
+    &-coment{
+        padding-top: 109px;
+        padding-left: 48px;
+        padding-right: 350px;
+        &-text{
+            font-family: 'medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 24px;
+            color: #555555;
+        }
+        &-title{
+            font-family: 'medium';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            margin-top: 10px;
+        }
+        .btn{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 30px;
+            margin-right: 70px;
+        }
+    }
+}

@@ -1,18 +1,48 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <GameItem/>
+    <ShopsBox/>
+    <ProductBox />
+    <NewsBox/>
+    <ProProduct/>
+    <TexnologyItem/>
+    <WatchBoxs/>
+    <CosmeticBox/>
+    <RealBox/>
+    <FoodBox/>
+    <SupportBox />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import GameItem from '@/components/home/GameItem.vue';
+import ShopsBox from '@/components/home/ShopsBox.vue';
+import ProductBox from '@/components/home/ProductBox.vue';
+import NewsBox from '@/components/home/NewsBox.vue';
+import ProProduct from '@/components/home/ProProduct.vue';
+import TexnologyItem from '@/components/home/TexnologyItem.vue';
+import WatchBoxs from '@/components/home/WatchBoxs.vue';
+import CosmeticBox from '@/components/home/CosmeticBox.vue';
+import RealBox from '@/components/home/RealBox.vue';
+import FoodBox from '@/components/home/FoodBox.vue';
+import SupportBox from '@/components/home/SupportBox.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    GameItem,
+    ShopsBox,
+    ProductBox,
+    NewsBox,
+    ProProduct,
+    TexnologyItem,
+    WatchBoxs,
+    CosmeticBox,
+    RealBox,
+    FoodBox,
+    SupportBox
+}
 }
 </script>
+

@@ -1,30 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <HeaderItem/>
   <router-view/>
+  <FooterItem/>
 </template>
+<script>
+  import HeaderItem from './components/lib/HeaderItem.vue';
+  import FooterItem from './components/lib/FooterItem.vue';
 
+export default{
+  components:{
+    HeaderItem,
+    FooterItem
+}
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import '@/styles/app.scss';
+@import '@splidejs/vue-splide/css';
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>

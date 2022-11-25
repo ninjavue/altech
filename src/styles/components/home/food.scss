@@ -1,0 +1,42 @@
+.food{
+    &-img{
+        height: 270px;
+        max-height: 270px;
+        background-color: #ccc;
+        border-radius: 8px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-title{
+        font-family: 'medium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #000000;
+        margin-top: 8px;
+    }
+    &-price{
+        font-family: 'medium';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #000000;
+        margin-bottom: 16px;
+        margin-top: 4px;
+    }
+    &-text{
+        font-family: 'medium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #858585;
+        span{
+            color: #3581EA;
+        }
+    }
+}

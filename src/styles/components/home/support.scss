@@ -1,0 +1,22 @@
+.support{
+
+    &-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px;
+        transition: .3s;
+        img{
+            width: 100%;
+            max-width: 80%;
+            display: block;
+            margin: auto;
+            height: 70px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            object-fit: contain;
+        }
+    }
+}

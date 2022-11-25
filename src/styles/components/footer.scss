@@ -1,0 +1,64 @@
+@import '../../styles/lib/colors.scss';
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    &__bottom{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #fff;
+        padding: 20px 0;
+        .menu{
+            display: flex;
+            align-items: start;
+        }
+        &__text{
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .foot__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px 30px;
+        &_text{
+            padding: 0;
+        }
+        a:hover{
+            background: unset;
+        }
+        &_title{
+            font-family: 'medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            color: #D6D6D6;
+            white-space: nowrap;
+
+        }
+        &_text{
+            position: relative; 
+            white-space: nowrap;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #D6D6D6;
+             &.green{
+                color: $green;
+             }
+             img{
+                position: absolute;
+                left: -34px;
+            }
+        }
+    }
+}
+.mr-200{
+    margin-right: 220px;
+}

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import '@/styles/lib/splide.scss';
+@import '@/styles/lib/class.scss';
+@import '@/styles/lib/mixin.scss';
+@import '@/styles/lib/grid.scss';
+@import '@/styles/lib/reset.scss';
+@import '@/styles/lib/fonts.scss';
+@import '@/styles/components/media.scss';
+
+// @import "url-to-cdn/splide.min.css";
+body::-webkit-scrollbar {
+    width: 10px;
+    letter-spacing: 0.02em;
+    &:hover{
+      width: 20px;
+    }
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    outline: 1px solid slategrey;
+    border-radius: 8px;
+  }
+
+
+
+  @media(max-width:1024p){
+    // .header .body-cart span {
+    //   width: 14px;
+    //   height: 14px;
+    // }
+  }
+  
