@@ -15,13 +15,15 @@
           </div>
           <div class="food mb-90">
              <div class="row">
-                <div class="col-3" v-for="random of randomproduct" :key="random._id">
-                    <div class="food-img">
+                <div class="col-3 col-md-4 col-sm-6" v-for="random of randomproduct" :key="random._id">
+                    <div @click="submit(random._id)">
+                        <router-link class="food-img" :to="`/product/view`">
                         <img :src="`${url}/${random.photos[0]}`" alt="">
-                    </div>
+                    </router-link>
                     <div class="food-title">{{random.title}}</div>
                     <div class="food-price">{{random.price.toLocaleString()}} so'm</div>
                     <div class="food-text">by <span>Co., Ltd FUJIWA USA</span></div>
+                    </div>
                 </div>
              </div>
           </div>
@@ -38,6 +40,11 @@
         },
         randomproduct(){
             return this.$store.getters.randomproduct
+        }
+      },
+      methods:{
+        submit(id){
+            this.$store.dispatch('getProduct',id)
         }
       },
       mounted() {

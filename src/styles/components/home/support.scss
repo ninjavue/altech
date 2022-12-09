@@ -1,5 +1,65 @@
 .support{
+    &-right{
+        width: 400px;
+        height: 100vh;
+        max-height: 100vh;
+        overflow: auto;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0 20px;
+        padding-top: 200px;
+        z-index: 2;
+        box-shadow: 20px 20px 0px rgba(204, 213, 222, 0.04);
+        button{
+            background: #000;
+            cursor: pointer;
+            span{
+                cursor: pointer;
+                &::after,
+                &:before{
+                    content: '';
+                    position: fixed;
+                    width: 30px;
+                    height: 2px;
+                    background-color: rgb(12, 11, 11);
+                    top: 200px;
+                    right: 20px;
+                    cursor: pointer;
+                        
+                }
+                &::after{
+                    transform: rotate(45deg);
+                }
+                &::before{
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &-img{
+            width: 200px;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                object-fit: cover;
+            }
+        }
+        &-title{
+            font-size: 20px;
+            color: black;
 
+        }
+        &-price{
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+    }
     &-box{
         display: flex;
         flex-direction: column;
@@ -8,6 +68,7 @@
         background-color: #fff;
         padding: 20px;
         transition: .3s;
+        cursor: pointer;
         img{
             width: 100%;
             max-width: 80%;
@@ -18,5 +79,12 @@
             background-position: center center;
             object-fit: contain;
         }
+    }
+}
+
+
+@media(max-width:440px){
+    .support .support-box{
+        padding: 1px;
     }
 }

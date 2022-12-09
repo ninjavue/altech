@@ -2,7 +2,7 @@
   <div class="news">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 col-lg-12">
                 <div class="news-box">
                     <div class="news-coment">
                         <div class="news-coment-text">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-lg-12">
                 <div class="news-box new--img">
                     <div class="news-coment">
                         <div class="news-coment-text">

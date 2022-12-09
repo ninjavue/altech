@@ -5,6 +5,7 @@ import category from './modules/category'
 import shop from './modules/shop'
 import lastproduct from './modules/lastproduct'
 import random from './modules/random'
+import cart from './modules/cart'
 
 export default createStore({
   state: {
@@ -20,6 +21,6 @@ export default createStore({
   actions: {
   },
   modules: {
-    product,brend,category,shop,lastproduct,random
+    product,brend,category,shop,lastproduct,random,cart
   }
 })

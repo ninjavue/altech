@@ -42,3 +42,21 @@
         }
     }
 }
+
+
+@media (max-width:1030px) {
+    .news-coment .btn {
+        width: 120px;
+    }    
+}
+@media (max-width:440px) {
+    .news-coment {
+        padding-top: 55px;
+        padding-left: 48px;
+        padding-right: 140px;
+        &-text,
+        &-title{
+            color: aliceblue;
+        }
+    } 
+}

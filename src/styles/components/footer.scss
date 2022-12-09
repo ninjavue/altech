@@ -16,7 +16,8 @@
         }
         &__text{
             display: flex;
-            gap: 10px;
+            gap: 20px;
+            white-space: nowrap;
         }
     }
     .foot__menu{
@@ -61,4 +62,30 @@
 }
 .mr-200{
     margin-right: 220px;
+}
+
+
+@media (max-width:610px) {
+    .footer .foot__menu_title {
+        font-size: 18px;
+    }
+}
+@media (max-width:440px) {
+    .footer .foot__menu{
+        margin-left: 70px;
+        &.ml-md-60{
+            margin-left: 100px;
+        }
+    }
+    .footer__bottom{
+        &__text{
+            &.mr-120{
+                margin-right: 0;
+            }
+            &.mr-200{
+                display: none;
+            }
+        }
+    }
+
 }

@@ -30,4 +30,9 @@ export default {
 
 <style>
 
+@media (max-width:440px) {
+    .technolgy-menu{
+        display: none;
+    }
+}
 </style>

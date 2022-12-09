@@ -1,98 +1,154 @@
 @import './mixin.scss';
-.container{
+.containers,
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: content-box;
 }
-.row{
+
+.row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -20px;
     margin-right: -20px;
 }
-.bg-wight{
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.bg-wight {
     background: #fff;
     box-shadow: 4px 8px 16px rgba(69, 79, 89, 0.04);
-  }
+}
 
-@for $i from 1 through 12{
-    .col-#{$i}{
+@for $i from 1 through 12 {
+    .col-#{$i} {
         @include fb(percentage($i/12));
     }
-    .m{
-        &b{
-            @for $i from 1 through 12{
-                &-#{$i*10}{
+
+    .m {
+        &b {
+            @for $i from 1 through 12 {
+                &-#{$i*10} {
                     margin-bottom: #{$i*10}px;
-                }}
-            
+                }
+            }
+
         }
-        &l{
-            @for $i from 1 through 12{
-                &-#{$i*10}{
+
+        &l {
+            @for $i from 1 through 12 {
+                &-#{$i*10} {
                     margin-left: #{$i*10}px;
-                }}
-            
+                }
+            }
+
         }
-        &r{
-            @for $i from 1 through 12{
-                &-#{$i*10}{
+
+        &r {
+            @for $i from 1 through 12 {
+                &-#{$i*10} {
                     margin-right: #{$i*10}px;
-                }}
-            
+                }
+            }
+
         }
-        &t{
-            @for $i from 1 through 12{
-                &-#{$i*10}{
+
+        &t {
+            @for $i from 1 through 12 {
+                &-#{$i*10} {
                     margin-top: #{$i*10}px;
-                }}
-            
+                }
+            }
+
         }
     }
 }
 
-@media(max-width:1366px){
-    @for $i from 1 through 12{
-        .col-xl-#{$i}{
-            @include fb(percentage($i/12))
-        }
-    }
-}
-@media(max-width:1024px){
-    @for $i from 1 through 12{
-        .col-lg-#{$i}{
-            @include fb(percentage($i/12))
-        }
-    }
-}
-@media(max-width:768px){
-    @for $i from 1 through 12{
-        .col-md-#{$i}{
-            @include fb(percentage($i/12))
-        }
-    }
-}
-@media(max-width:600px){
-    @for $i from 1 through 12{
-        .col-sm-#{$i}{
-            @include fb(percentage($i/12))
-        }
-    }
-}
-@media(max-width:375px){
-    @for $i from 1 through 12{
-        .col-xs-#{$i}{
+@media(max-width:1366px) {
+    @for $i from 1 through 12 {
+        .col-xl-#{$i} {
             @include fb(percentage($i/12))
         }
     }
 }
 
-.col-20{
+@media(max-width:1030px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+    .rows{
+        width: 100%;
+
+    }
+}
+
+@media(max-width:770px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+    
+}
+
+@media(max-width:610px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+@media(max-width:440px) {
+    @for $i from 1 through 12 {
+        .col-sl-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+    .rows{
+        padding: 0 0px;
+    }
+}
+@media(max-width:375px) {
+    @for $i from 1 through 12 {
+        .col-xs-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+.col-20 {
     width: 20%;
 }
-.col-small-9{
+
+.col-small-9 {
     width: 73%;
     padding: 20px;
+}
+
+
+@media(max-width:1030px){
+    .container{
+        max-width: 900px;
+        &s{
+            max-width: 900px;
+        }
+
+    }
+}
+@media(max-width:770px){
+    .container{
+        overflow: hidden;
+        max-width: 690px;
+        margin: 0 auto;
+        &s{
+            max-width: 720px;
+        }
+    }
 }

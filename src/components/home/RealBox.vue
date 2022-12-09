@@ -16,13 +16,15 @@
           </div>
           <div class="real mb-90">
              <div class="row">
-                <div class="col-20 p" v-for="product of lastproducts" :key="product._id">
-                    <div class="real-img">
+                <div class="col-20 p col-lg-3 col-md-4 col-sm-6" v-for="product of lastproducts" :key="product._id">
+                    <div @click="submit(product._id)">
+                        <router-link class="real-img" :to="`product/view`">
                         <img :src="`${url}/${product.img}`" alt="">
-                    </div>
+                        </router-link>
                     <div class="real-title">{{product.title}}</div>
                     <div class="real-price">{{product.price.toLocaleString()}} so'm</div>
                     <div class="real-text">by <span>Flower Real Estate</span></div>
+                    </div>
                 </div>
              </div>
           </div>
@@ -40,6 +42,11 @@
            return this.$store.getters.lastproducts
         }
 
+      },
+      methods:{
+        submit(id){
+            this.$store.dispatch('getProduct',id)
+        }
       },
       mounted() {
         this.$store.dispatch('getAllLastproduct')

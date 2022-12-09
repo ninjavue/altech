@@ -14,17 +14,20 @@
           </div>
           <div class="cosmetic mb-90">
              <div class="row">
-                <div class="col-3" v-for="random of randomproduct" :key="random._id">
-                    <div class="cosmetic-img">
+                <div class="col-3 col-md-4 col-sm-6" v-for="random,index of randomproduct" :key="index">
+                    <div class="cos"  @click="submit(random._id)">
+                        <router-link class="cosmetic-img" :to="`/product/view`">
                         <img :src="`${url}/${random.photos[0]}`" alt="">
+                        </router-link>
                     </div>
                     <div class="cosmetic-title">{{random.title}}</div>
-                    <div class="cosmetic-price">{{random.price.toLocaleString()}} so'm</div>
+                    <div  class="cosmetic-price">{{random.price.toLocaleString()}} so'm</div>
                     <div class="cosmetic-text">by <span>CO., LTD Baby Girl</span></div>
+                    </div>
                 </div>
              </div>
           </div>
-    </div>
+  
   </template>
   
   <script>
@@ -39,9 +42,14 @@
             return this.$store.getters.randomproduct
         }
       },
+      methods:{
+        submit(id){
+            this.$store.dispatch('getProduct',id)
+        }
+      },
       mounted() {
         this.$store.dispatch('getAllRandom')
-      },
+      }
   }
   </script>
   

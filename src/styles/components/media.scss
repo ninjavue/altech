@@ -1,7 +1,21 @@
 
 
-@media (max-width:1024px) {
-    .mr-200[data-v-f3aae970] {
-         margin-right: 0px;
+@media (max-width:768px) {
+    .dn-768{
+        display: none;
+    }
+    .ml-768{
+        margin-left: auto;
+    }
+    .ml-md-60{
+        margin-left: 60px;
+    }
+    .ml-md-30{
+        margin-left: 30px;
+    }
+}
+@media (max-width:768px) {
+    .dn-600{
+        display: none;
     }
 }

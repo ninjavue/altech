@@ -1,24 +1,30 @@
-.pro{
-    &-img{
+.pro {
+    &-img {
         height: 290px;
         max-height: 290px;
+        width: 100%;
         border-radius: 8px;
-        background-repeat: no-repeat;
-        background-image: url('@/assets/img/laptop.svg');
-        background-position: center center;
-        object-fit: contain;
-        &.bg-img{
-            background-image: url('@/assets/img/laptop1.svg');
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover;
+
         }
     }
-    &-box{
+
+    &-box {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         height: 270px;
         max-height: 270px;
-        &-title{
+
+        &-title {
             font-family: 'medium';
             font-style: normal;
             font-weight: 400;
@@ -27,7 +33,8 @@
             color: #000000;
             margin-bottom: 10px;
         }
-        &-price{
+
+        &-price {
             font-family: 'medium';
             font-style: normal;
             font-weight: 600;
@@ -35,7 +42,8 @@
             line-height: 28px;
             color: #000000;
             margin-bottom: 20px;
-            span{
+
+            span {
                 font-family: 'medium';
                 font-style: normal;
                 font-weight: 400;
@@ -46,7 +54,8 @@
                 margin-left: 16px;
             }
         }
-        &-text{
+
+        &-text {
             font-family: 'medium';
             font-style: normal;
             font-weight: 400;
@@ -57,13 +66,15 @@
             padding-right: 130px;
             border-bottom: 8px solid #479622;
             margin-bottom: 14px;
-            &:last-child{
+
+            &:last-child {
                 padding-right: 0px;
                 flex: 1;
                 border-bottom: 8px solid #ccc;
             }
         }
-        .boxs{
+
+        .boxs {
             font-family: 'medium';
             padding: 8px 9px;
             width: 40px;
@@ -74,7 +85,8 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 24px;
-            &-text{
+
+            &-text {
                 font-family: 'medium';
                 font-style: normal;
                 font-weight: 400;
@@ -85,7 +97,8 @@
                 margin-bottom: 16px;
             }
         }
-        .dots{
+
+        .dots {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -94,14 +107,16 @@
             display: flex;
             padding: 4px;
         }
-        .btn{
+
+        .btn {
             width: 95%;
         }
     }
-    .img-box{
+
+    .img-box {
         height: 570px;
         max-height: 570px;
-       background: #ccc;
+        background: #ccc;
         background-repeat: no-repeat;
         background-position: center center;
         object-fit: contain;
@@ -111,13 +126,15 @@
         align-items: flex-end;
         position: relative;
         margin: 64px 0;
-        .img-boxs{
+
+        .img-boxs {
             position: absolute;
             top: 174px;
             right: 300px;
         }
-        &-title{
-           font-family: 'medium';
+
+        &-title {
+            font-family: 'medium';
             font-style: normal;
             font-weight: 600;
             font-size: 34px;
@@ -125,7 +142,8 @@
             color: #FFFFFF;
             margin-bottom: 32px;
         }
-        &-text{
+
+        &-text {
             font-family: 'medium';
             font-style: normal;
             font-weight: 500;
@@ -134,5 +152,27 @@
             color: #FFFFFF;
             margin-bottom: 16px;
         }
+    }
+}
+
+
+@media(max-width:1030px){
+    .pro .img-box .img-boxs {
+        right: 77px;
+    }
+    
+}
+@media(max-width:440px){
+    .pro-box-text {
+        padding-right: 263px
+    }
+    .ml-sl-80{
+        margin-left: 80px;
+    }
+    .pro .img-box .img-boxs {
+        right: 30px;
+    }
+    .pro .img-box-title {
+        font-size: 28px;
     }
 }
